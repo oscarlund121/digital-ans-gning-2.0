@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "Chillax-Regular";
+  src: url("fonts/Chillax-Regular.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Whatdo";
+  src: url("fonts/Whatdo.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sunday";
+  src: url("fonts/SundayLemon.woff2") format("woff2");
+  font-style: normal;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.about-container {
+  opacity: 0; /* Initial state */
+  transition: opacity 0.1s ease-in-out;
+}
+
+.about-container.visible {
+  opacity: 1; /* Final state */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.list-container {
+  opacity: 0; /* Initial state */
+  transition: opacity 0.1s ease-in-out;
+}
+
+.list-container.visible {
+  opacity: 1; /* Final state */
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Chillax-Regular", sans-serif;
+  background-color: white;
+  color: black;
+}
+
+ul{
+  list-style-type: none;
+}
+
+
+/* Navigation */
+.navigation {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  font-family: "Sunday";
+  height: 100px;
+  width: 100%;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 100px;
+  margin: 0;
+}
+
+.navigation ul li a {
+  font-size: 48px;
+  text-decoration: none;
+  color: red;
+  padding: 5px 20px;
+  border-radius: 15px;
+  border: solid 5px red;
+  transition: color 0.3s;
+}
+
+.navigation ul li a:hover {
+  color: blue;
+  border-color: blue;
+}
+
+#about-me:hover{
+  color: green;
+  border-color: green;
+}
+
+#projects:hover{
+  color: yellow;
+  border-color: yellow;
+}
+
+.ham-menu {
+  display: none;
+}
+
+.cv-button {
+  font-family: "Whatdo";;
+  background-color: blue;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  padding: 10px 30px;
+  font-size: 36px;
+  font-weight: 300;
+  text-decoration: none;
+  margin: auto;
+  
+  
+}
+
+.cv-button:hover {
+  background-color: red;
+  color: black;
+  transition: background-color 0.1s ease;
+}
+
+
+/* Parallex section */
+.parallex {
+  background-image: url('img/sky.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  font-family: "Whatdo";
+}
+
+.parallex h1 {
+  font-size: 120px;
+  font-weight: 400;
+line-height: 1px;
+}
+
+/* About */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 75px;
+  line-break:auto
+}
+
+.about-container h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.about-container p{
+  font-size: 18px;
+  font-weight: 400;
+ 
+}
+
+.about-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 25px;
+}
+
+.about-img{
+  width: 100%;
+  height: auto;
+}
+
+.about-content-img{
+  width: 50px;
+  height: auto;
+}
+
+.about-content-img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* List container */
+.list-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: flex-start;
+  margin: 100px;
+}
+
+.list-container h2{
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.qual-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: start; /* Juster grid items til venstre */
+}
+
+.qual-img {
+  width: 150px;
+  height: auto;
+  margin: 0; /* Fjern margin */
+  padding: 0; /* Fjern padding */
+  box-sizing: border-box; /* Inkluder padding og border i elementets samlede bredde og højde */
+}
+
+
+@media (max-width: 900px) {
+  .navigation {
+    background-color: white;
+    padding: 0;
+    margin-top: 30px;
+    width: 100%;
+    height: 100vh;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.3s ease;
+  }
+
+  .cv-button {
+    margin: 50px auto;
+   
+  }
+
+  .navigation ul {
+    display: block;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navigation ul li{
+    margin: 50px 0 0 0;
+    font-size: 48px;
+  }
+  
+  .navigation.active {
+    right: 0;
+  }
+
+  nav {
+    padding: 1rem;
+    display: flex;
+    background-color: white;
+  }
+
+  .ham-menu {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  /* Parallex section */
+  .parallex h1 {
+    font-size: 36px;
+    font-weight: 800;
+  }
+
+  /* About */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  .about-container h3 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .parallex {
+    width: 100%;
+    height: auto;
+  }
+}
