@@ -213,29 +213,26 @@ line-height: 1px;
 .qual-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: start; /* Juster grid items til venstre */
+  justify-items: start; 
 }
 
 .qual-img {
   width: 150px;
   height: auto;
-  margin: 0; /* Fjern margin */
-  padding: 0; /* Fjern padding */
-  box-sizing: border-box; /* Inkluder padding og border i elementets samlede bredde og højde */
+  margin: 0; 
+  padding: 0; 
+  
 }
 
 
 @media (max-width: 900px) {
+
   .navigation {
-    background-color: white;
-    padding: 0;
-    margin-top: 30px;
     width: 100%;
     height: 100vh;
-    max-width: 450px;
-    position: fixed;
+    max-width: 900px;
     top: 0;
-    right: -450px;
+    right: -900px;
     display: flex;
     flex-direction: column;
     justify-content: top;
@@ -243,13 +240,13 @@ line-height: 1px;
     text-align: center;
     font-size: 3rem;
     transition: 0.3s ease;
+    background: white;
   }
-
+  
   .cv-button {
     margin: 50px auto;
-   
   }
-
+  
   .navigation ul {
     display: block;
     align-items: center;
@@ -257,7 +254,8 @@ line-height: 1px;
     padding: 0;
     margin: 0;
   }
-  .navigation ul li{
+  
+  .navigation ul li {
     margin: 50px 0 0 0;
     font-size: 48px;
   }
@@ -265,21 +263,21 @@ line-height: 1px;
   .navigation.active {
     right: 0;
   }
-
+  
   nav {
     padding: 1rem;
     display: flex;
-    background-color: white;
+    background-color: transparent;
   }
-
+  
   .ham-menu {
     display: flex;
     height: 50px;
     width: 50px;
     margin-left: auto;
-    position: relative;
+    position: relative;;
   }
-
+  
   .ham-menu span {
     height: 5px;
     width: 100%;
@@ -291,33 +289,48 @@ line-height: 1px;
     transform: translate(-50%, -50%);
     transition: 0.3s ease;
   }
-
+  
   .ham-menu span:nth-child(1) {
     top: 25%;
   }
-
+  
   .ham-menu span:nth-child(3) {
     top: 75%;
   }
-
+  
   .ham-menu.active span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
   }
-
+  
   .ham-menu.active span:nth-child(2) {
     opacity: 0;
   }
-
+  
   .ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
   /* Parallex section */
+
   .parallex h1 {
     font-size: 36px;
     font-weight: 800;
+  }
+
+  header {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+  }
+
+  .parallex {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    z-index: 1;
   }
 
   /* About */
@@ -330,10 +343,5 @@ line-height: 1px;
   .about-container h3 {
     font-size: 30px;
     font-weight: 600;
-  }
-
-  .parallex {
-    width: 100%;
-    height: auto;
   }
 }
