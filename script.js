@@ -28,7 +28,6 @@ document.addEventListener('scroll', function() {
   const aboutSection = document.querySelector('.list-container');
   const position = aboutSection.getBoundingClientRect();
 
-  // Check if the element is in the viewport
   if (position.top < window.innerHeight && position.bottom >= 0) {
     aboutSection.classList.add('visible');
   }
