@@ -13,18 +13,32 @@
   src: url("fonts/SundayLemon.woff2") format("woff2");
   font-style: normal;
 }
+@font-face {
+  font-family: "Pizzicato";
+  src: url("fonts/SundayLemon.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rethink-bold";
+  src: url("fonts/rethink/RethinkSans-Bold.woff2") format("woff2");
+  font-style: normal;
+}
 
-/* @keyframes fadeIn {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
-} */
+}
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -35,30 +49,30 @@
   }
 }
 
-/* .about-container {
-  opacity: 0; 
+.about-container {
+  opacity: 0;
   transition: opacity 0.1s ease-in-out;
 }
 
 .about-container.visible {
-  opacity: 1; 
+  opacity: 1;
   animation: fadeIn 1s ease-in-out;
 }
 
 .list-container {
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.1s ease-in-out;
 }
 
 .list-container.visible {
-  opacity: 1; 
+  opacity: 1;
   animation: fadeIn 1s ease-in-out;
-} */
+}
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  width: 100vw; 
+  width: 100vw;
 }
 
 body {
@@ -77,10 +91,10 @@ ul {
 .navigation {
   display: flex;
   position: absolute;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   padding: 20px 20px;
-  font-family: "Sunday";
+  font-family: "Chillax-Regular";
   height: 100px;
   width: 100%;
 }
@@ -91,33 +105,31 @@ ul {
   justify-content: center;
   list-style: none;
   gap: 80px;
-  margin: 0;
 }
 
 .navigation ul li a {
-  font-size: 48px;
+  font-size: 18px;
   text-decoration: none;
-  color: red;
+  color: black;
   padding: 5px 20px;
-  border-radius: 15px;
-  border: solid 5px red;
+  border: solid 2px black;
+  border-radius: 50px;
   transition: color 0.3s;
 }
 
-
 .navigation ul li a:hover {
-  color: blue;
-  border-color: blue;
+  color: #adb4ac;
+  border-color: #adb4ac;
 }
 
 #about-me:hover {
-  color: green;
-  border-color: green;
+  color: #adb4ac;
+  border-color: #adb4ac;
 }
 
 #projects:hover {
-  color: yellow;
-  border-color: yellow;
+  color: #adb4ac;
+  border-color: #adb4ac;
 }
 
 .ham-menu {
@@ -125,66 +137,81 @@ ul {
 }
 
 .cv-button {
-  font-family: "Whatdo";
-  background-color: blue;
+  background-color: #adb4ac;
   border: none;
-  border-radius: 15px;
+  border-radius: 50px;
   cursor: pointer;
-  color: white;
+  color: black;
   padding: 10px 30px;
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 300;
   text-decoration: none;
-  margin: auto;
+  margin: 0 80px;
 }
 
 .cv-button:hover {
-  background-color: red;
-  color: black;
+  background-color: black;
+  color: #adb4ac;
   transition: background-color 0.1s ease;
 }
 
-
 /* Parallex section */
 .parallex {
-  /* background-image: url("img/sky.jpg"); */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   color: black;
-  text-align: center;
-  font-family: "Sunday";
+  text-align: left;
+  font-family: "Rethink-bold";
   position: relative;
+  margin: 0 0 0 50px;
 }
 
 .parallex h1 {
   font-size: 120px;
   font-weight: 700;
-  line-height: 1px;
+  line-height: 15px;
 }
 
-.parallex p {
+.parallex h3 {
   font-size: 36px;
   font-weight: 400;
+  
+}
+.parallex-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding: 0;
+}
+
+.arrow {
+  align-self: center;
 }
 
 /* About */
 .about-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin: 75px;
+  margin: 50px;
   line-break: auto;
 }
 
-.about-container h3 {
-  font-size: 36px;
+.about-container h2 {
+  font-family: "Rethink-bold";
+  font-size: 80px;
   font-weight: 600;
+  grid-column: 1 / -1;
+  
+}
+
+.about-container h3 {
+  font-size: 24px;
+  font-weight: 600;
+
 }
 
 .about-container p {
@@ -195,23 +222,52 @@ ul {
 .about-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: left;
-  margin: 0 25px 25px 25px;
+  margin: 0 50px 25px 0;
+  padding: 0 50px 0 0;
   
+}
+
+.about-content span {
+  color: #adb4ac;
+}
+
+span {
+  color: #adb4ac;
+}
+
+.list-content {
+ padding: 0 10px 0 0;
+}
+
+.qual-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 ;
+  padding: 15px 0 0 0;
+}
+
+.qual-img {
+  width: 50px;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .about-img {
   width: 100%;
   height: auto;
-  border: solid 10px red;
   min-width: 400px;
+  border-radius: 25px;
+  display: none;
 }
 
 .about-content-svg {
   width: 50px;
   height: auto;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .about-content-svg:hover {
@@ -223,45 +279,16 @@ ul {
   position: absolute;
   bottom: 100px; /* Juster denne værdi efter behov */
   font-size: 48px; /* Juster størrelsen efter behov */
-  color: red;
+  color: #adb4ac;
   text-decoration: none;
   animation: bounce 2s infinite; /* Tilføj en bounce-animation */
 }
 
-/* List container */
+/* Projekter */
 
-  header {
-    position: absolute;
-    width: 100%;
-    background: transparent;
-    z-index: 10;
-  }
 
-.list-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: flex-start;
-  margin: 100px;
-}
 
-.list-container h2 {
-  font-size: 36px;
-  font-weight: 600;
-}
 
-.qual-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: start;
-}
-
-.qual-img {
-  width: 100px;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
 
 @media (max-width: 900px) {
   .navigation {
@@ -289,7 +316,7 @@ ul {
     align-items: center;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 50px;
   }
 
   .navigation ul li {
@@ -378,11 +405,16 @@ ul {
   }
 
   .about-container h3 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
   }
 
-  .about-img{
+  .about-container p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .about-img {
     max-width: 350px;
     min-width: 100px;
     height: auto;

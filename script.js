@@ -33,3 +33,14 @@ document.addEventListener('scroll', function() {
   }
 });
 
+document.querySelectorAll('.qual-button').forEach(button => {
+  button.addEventListener('click', function() {
+    const targetId = this.getAttribute('data-target');
+    const listContent = document.getElementById(targetId);
+    if (listContent.style.display === 'none' || listContent.style.display === '') {
+      listContent.style.display = 'block'; 
+    } else {
+      listContent.style.display = 'none'; 
+    }
+  });
+});

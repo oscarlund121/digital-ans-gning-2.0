@@ -13,12 +13,12 @@
   <header>
     <div class="navigation">
       <ul>
-        <li><a id="index" href="#">Forside</a></li>
         <li><a id="about-me" href="#about">Om mig</a></li>
         <li><a id="projects" href="#projects">Projekter</a></li>
+        <li><a id="projects" href="#projects">Kontakt</a></li>
       </ul>
       <button class="cv-button">CV</button>
-  
+
     </div>
     <nav>
       <div class="ham-menu">
@@ -32,24 +32,27 @@
   <section class="parallex">
     <div class="parallex-content">
       <h1>Multimediestuderende</h1>
-      <h1><span>Frontend udvikler</span></h1>
-      <p>Oscar Lund Albertsen</p>
+      <h1><span>Frontend developer</span></h1>
+      <h3>Oscar Lund Albertsen</h3>
     </div>
-    <a href="#about" class="scroll-down">
-      &#x2193; <!-- Pil-ikon -->
-    </a>
+    <div class="arrow">
+      <a href="#about" class="scroll-down">
+        &#x2193; <!-- Pil-ikon -->
+      </a>
+    </div>
   </section>
 
-
-
-
-
   <section id="about" class="about-container">
-
+    <h2>Om mig</h2>
     <div class="about-content">
+      <div>
+        <a href="https://www.linkedin.com/in/oscar-lund/" target="_blank" aria-label="Besøg min LinkedIn profil">
+          <img src="img/linkedin.svg" alt="LinkedIn profil" class="about-content-svg">
+        </a>
+      </div>
       <h3>Jeg er en passioneret multimediestuderende med fokus på
-
-        frontend-udvikling og digitalt design. </h3>
+        <span>frontend-udvikling</span> og <span>digitalt design</span>.
+      </h3>
       <p>Jeg arbejder med HTML, CSS og JavaScript til at bygge moderne websites, men jeg er også i gang med at udvikle
         mine færdigheder i Three.js og React Three Fiber for at bringe interaktivt 3D-indhold til web. På sigt kommer
         jeg også til at arbejde med React og Next.js som en del af min uddannelse.
@@ -61,21 +64,10 @@
 
         Vil du lære mere om, hvad jeg kan? Tjek mine projekter nedenfor!
       </p>
-      <div>
-        <a href="https://www.linkedin.com/in/oscar-lund/" target="_blank" aria-label="Besøg min LinkedIn profil">
-          <img src="img/linkedin.svg" alt="LinkedIn profil" class="about-content-svg">
-        </a>
 
-      </div>
     </div>
-    <div class="about-content">
-      <img class="about-img" src="img/portræt_img.webp" alt="">
-    </div>
-  </section>
-
-  <section class="list-container">
-    <div>
-      <h2>Kvalifikationer</h2>
+    <div class="list-content">
+      <h3>Kvalifikationer</h3>
       <ul class="qual-list">
         <li><img class="qual-img" src="img/html-144.svg" alt=""></li>
         <li><img class="qual-img" src="img/css.svg" alt=""></li>
@@ -84,17 +76,18 @@
         <li><img class="qual-img" src="img/github.svg" alt=""></li>
         <li><img class="qual-img" src="img/git.svg" alt=""></li>
       </ul>
-    </div>
-    <div>
-      <h2>Kompetencer (Under oplæring)</h2>
+      <h3>Kompetencer</h3>
       <ul class="qual-list">
         <li><img class="qual-img" src="img/nextjs.svg" alt=""></li>
         <li><img class="qual-img" src="img/react.svg" alt=""></li>
         <li><img class="qual-img" src="img/threejs.svg" alt=""></li>
         <li><img class="qual-img" src="img/tailwind.svg" alt=""></li>
       </ul>
+    
     </div>
   </section>
+
+ 
 
 
   <section id="projects" class="project-container">
