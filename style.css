@@ -338,7 +338,8 @@ span {
     font-size: 3rem;
     transition: 0.3s ease;
     background: white;
-    z-index: 1  ;
+    z-index: 1;
+    overflow: hidden;
     
   }
 
@@ -364,6 +365,7 @@ span {
 
   .navigation.active {
     right: 0;
+    transform: translateX(0);
   }
 
   nav {

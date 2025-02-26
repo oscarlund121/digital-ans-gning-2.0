@@ -1,21 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const burgerMenu = document.querySelector('.ham-menu');
-  const navigation = document.querySelector('.navigation');
-  const navLinks = document.querySelectorAll('.navigation ul li a');
-  const body = document.body;
+const burgerMenu = document.querySelector('.ham-menu');
+const navigation = document.querySelector('.navigation');
+const navLinks = document.querySelectorAll('.navigation ul li a');
 
-  burgerMenu.addEventListener('click', () => {
-    burgerMenu.classList.toggle('active');
-    navigation.classList.toggle('active');
-    body.classList.toggle('no-scroll'); // Forhindrer scrolling
-  });
+burgerMenu.addEventListener('click', () => {
+  burgerMenu.classList.toggle('active');
+  navigation.classList.toggle('active');
+});
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      burgerMenu.classList.remove('active');
-      navigation.classList.remove('active');
-      body.classList.remove('no-scroll'); // Tillader scrolling igen
-    });
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+    navigation.classList.remove('active');
   });
 });
 
