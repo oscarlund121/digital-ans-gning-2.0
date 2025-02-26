@@ -23,6 +23,11 @@
   src: url("fonts/rethink/RethinkSans-Bold.woff2") format("woff2");
   font-style: normal;
 }
+@font-face {
+  font-family: "Rethink-medium";
+  src: url("fonts/rethink/RethinkSans-Regular.woff2") format("woff2");
+  font-style: normal;
+}
 
 @keyframes fadeIn {
   from {
@@ -90,7 +95,6 @@ ul {
 /* Navigation */
 .navigation {
   display: flex;
-  position: absolute;
   justify-content: right;
   align-items: center;
   padding: 20px 20px;
@@ -201,10 +205,12 @@ ul {
 }
 
 .about-container h2 {
-  font-family: "Rethink-bold";
-  font-size: 80px;
+  font-family: "Rethink-medium";
+  font-size: 36px;
   font-weight: 600;
   grid-column: 1 / -1;
+  margin-left: 35px;
+  text-decoration: underline;
   
 }
 
@@ -225,7 +231,7 @@ ul {
   justify-content: top;
   align-items: left;
   margin: 0 50px 25px 0;
-  padding: 0 50px 0 0;
+  padding: 0 25px 0 25px;
   
 }
 
@@ -238,15 +244,19 @@ span {
 }
 
 .list-content {
- padding: 0 10px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
 }
 
 .qual-list {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin: 0 ;
-  padding: 15px 0 0 0;
+  padding: 0 50px 0 0;
+  margin: 0;
+ 
 }
 
 .qual-img {
@@ -261,13 +271,12 @@ span {
   height: auto;
   min-width: 400px;
   border-radius: 25px;
-  display: none;
 }
 
 .about-content-svg {
   width: 50px;
   height: auto;
-  margin-top: 25px;
+  
 }
 
 .about-content-svg:hover {
