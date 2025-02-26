@@ -102,6 +102,8 @@ ul {
   height: 100px;
   width: 100%;
   margin: 0;
+  position: absolute;
+  background-color: white;
 }
 
 .navigation ul {
@@ -163,14 +165,13 @@ ul {
 /* Parallex section */
 .parallex {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: left;
   align-items: center;
   color: black;
   text-align: left;
   font-family: "Rethink-bold";
-  position: relative;
   margin: 10px 0 0 50px;
 }
 
@@ -178,6 +179,8 @@ ul {
   font-size: 120px;
   font-weight: 700;
   line-height: 15px;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .parallex h3 {
@@ -185,13 +188,7 @@ ul {
   font-weight: 400;
   
 }
-.parallex-content div {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  padding: 0;
-}
+
 
 .arrow {
   align-self: center;
@@ -201,22 +198,20 @@ ul {
 .about-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin: 100px 50px 0 50px;
-  padding-right: 25px;
-  line-break: auto;
+  margin: 0 50px 0 50px; 
+  padding: 0;
 }
 
 .about-container h2 {
   font-size: 36px;
-  font-weight: 600;
   grid-column: 1 / -1;
-  margin-left: 35px;
   text-decoration: underline;
   
 }
 
 .about-container h3 {
-  font-size: 60px;
+  font-size: 66px;
+  margin-top: -10px;
 }
 
 .about-container h4 {
@@ -227,15 +222,20 @@ ul {
 .about-container p {
   font-size: 18px;
   font-weight: 400;
+  margin-top: -15px;
+}
+
+.about-container div{
+  margin-right: 25px;
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
-  justify-content: top;
-  align-items: left;
+  align-items: flex-start;
   margin: 0 50px 25px 0;
-  padding: 0 25px 0 25px;
+  padding: 0 0 0 25px;
+  
   
 }
 
@@ -250,7 +250,7 @@ span {
 .list-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0;
+  margin: 0 0 0 25px;
   padding: 0;
 }
 
@@ -273,8 +273,8 @@ span {
 .about-img {
   width: 100%;
   height: auto;
-  min-width: 400px;
   border-radius: 25px;
+  min-width: 350px
 }
 
 .about-content-svg {
@@ -291,7 +291,7 @@ span {
 .scroll-down {
   position: absolute;
   bottom: 100px; /* Juster denne værdi efter behov */
-  font-size: 120px; /* Juster størrelsen efter behov */
+  font-size: 70px; /* Juster størrelsen efter behov */
   color: #adb4ac;
   text-decoration: none;
   animation: bounce 2s infinite; /* Tilføj en bounce-animation */
@@ -303,7 +303,14 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;  
-  align-items: center;  
+  align-items: center; 
+  margin: 100px 50px 0 50px; 
+}
+
+.project-container h2 {
+  align-self: flex-start;
+  font-size: 36px;
+  text-decoration: underline;
 }
 
 .project-content {
@@ -313,15 +320,9 @@ span {
   margin: 50px;
 }
 
-.project-container h2 {
-  align-self: flex-start;
-  
-}
 
 
-
-
-@media (max-width: 900px) {
+@media (max-width: 1250px){
   .navigation {
     width: 100%;
     height: 100vh;
@@ -336,6 +337,8 @@ span {
     font-size: 3rem;
     transition: 0.3s ease;
     background: white;
+    z-index: 1  ;
+    
   }
 
   .cv-button {
@@ -365,7 +368,7 @@ span {
   nav {
     padding: 1rem;
     display: flex;
-    background-color: transparent;
+    
   }
 
   .ham-menu {
@@ -374,6 +377,7 @@ span {
     width: 50px;
     margin-left: auto;
     position: relative;
+    z-index: 2;
   }
 
   .ham-menu span {
@@ -388,7 +392,7 @@ span {
     transition: 0.3s ease;
   }
 
-  .ham-menu span:nth-child(1) {
+  .ham-menu span:nth-child(1) { 
     top: 25%;
   }
 
@@ -410,6 +414,68 @@ span {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
+
+  .parallex{
+  justify-content: left;
+  align-items: center;
+  margin: -100px 50px 0 50px;
+}
+
+  .parallex h1 {
+    font-size: 80px;
+    line-height: 15px;
+  }
+  
+  .parallex h3 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 50px; /* Juster denne værdi efter behov */
+    font-size: 35px; /* Juster størrelsen efter behov */
+    color: #adb4ac;
+    text-decoration: none;
+    animation: bounce 2s infinite; /* Tilføj en bounce-animation */
+  }
+  
+
+
+  .about-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: left;
+    margin: 0 50px 0 50px; 
+    padding: 0;
+  }
+
+  .about-container h3 {
+    font-size: 36px;
+  }
+
+  .about-img{
+    max-width: 350px;
+    min-width: 100px;
+    margin-left: 25px;
+  }
+
+  .about-content-img-list{
+    display: grid;  
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .list-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+}
+
+
+@media (max-width: 700px) {
+
   /* Parallex section */
 
   .parallex h1 {
@@ -422,16 +488,18 @@ span {
   }
 
   .parallex {
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
     height: 50vh;
-    z-index: 1;
+    z-index: -1;
+    margin: 0;
   }
 
   /* About */
   .about-container {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     margin: 15px;
   }
 
@@ -445,10 +513,16 @@ span {
     font-weight: 400;
   }
 
+  .about-content-img-list{ 
+    display: flex;
+    flex-direction: column;
+  }
+
   .about-img {
     max-width: 350px;
     min-width: 100px;
     height: auto;
     align-self: center;
   }
+
 }
