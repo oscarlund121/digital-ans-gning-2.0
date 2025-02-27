@@ -33,14 +33,12 @@ document.addEventListener('scroll', function() {
   }
 });
 
-document.querySelectorAll('.qual-button').forEach(button => {
-  button.addEventListener('click', function() {
-    const targetId = this.getAttribute('data-target');
-    const listContent = document.getElementById(targetId);
-    if (listContent.style.display === 'none' || listContent.style.display === '') {
-      listContent.style.display = 'block'; 
-    } else {
-      listContent.style.display = 'none'; 
-    }
-  });
+document.addEventListener('scroll', function() {
+  const aboutSection = document.querySelector('.project-container');
+  const position = aboutSection.getBoundingClientRect();
+
+  if (position.top < window.innerHeight && position.bottom >= 0) {
+    aboutSection.classList.add('visible');
+  }
 });
+
