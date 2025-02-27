@@ -409,15 +409,16 @@ span {
     justify-content: top;
     align-items: center;
     text-align: center;
-    font-size: 3rem;
+    transform: translateX(100%);
     transition: 0.3s ease;
     background: white;
     z-index: 3;
+    position: fixed;
     overflow: hidden;
   }
 
   .cv-button {
-    margin: 0 auto;
+    margin: 50px auto;
   }
 
   .navigation ul {
