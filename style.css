@@ -84,7 +84,8 @@
   animation: fadeIn 1s ease-in-out;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100vw;
@@ -130,7 +131,7 @@ ul {
   color: black;
   padding: 5px 20px;
   border: solid 2px black;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   transition: color 0.3s;
 }
 
@@ -156,7 +157,7 @@ ul {
 .cv-button {
   background-color: #adb4ac;
   border: none;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   cursor: pointer;
   color: black;
   padding: 10px 30px;
@@ -225,6 +226,7 @@ ul {
   font-size: 18px;
   font-weight: 400;
   margin-top: -15px;
+  padding-right: 200px;
 }
 
 .about-container div {
@@ -268,17 +270,14 @@ span {
   height: auto;
   margin: 0;
   padding: 0;
-  
 }
 
 .about-img {
   width: 100%;
   height: auto;
-  border-radius: 25px;
+ /*  border-radius: 25px; */
   min-width: 350px;
-  box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
-  -webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
-  -moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+  box-shadow: 0 0 10px 0 rgba(33,33,33,.5); 
 }
 
 .about-content-svg {
@@ -316,7 +315,6 @@ span {
   text-decoration: underline;
 }
 
-
 .project-content {
   display: flex;
   flex-direction: row;
@@ -337,14 +335,15 @@ span {
   width: 300px;
   height: 100%;
   border: solid 1px black;
-  border-radius: 15px;
   padding: 10px;
-  margin:  0 0 50px 0;
-  box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
-  -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
-  -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+  margin: 0 0 50px 0;
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
+.project-box:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(33,33,33,.2); 
+}
 .project-box img {
   width: 100%;
   height: auto;
@@ -361,7 +360,7 @@ span {
   padding: 10px 30px;
   font-size: 18px;
   text-decoration: none;
-  margin-top: 20px;
+ 
   width: 180px;
 }
 
@@ -373,15 +372,32 @@ span {
   transition: background-color 0.1s ease;
 }
 
+.project-svg{
+  max-width: 50px;
+  height: auto;
+  cursor: pointer;
+}
+
+.project-svg:hover {
+  transform: scale(1.1);
+} 
+
+.link-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 10px 0;
+}
+
 /* Kontakt sektion */
 
 .contact-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-
+  justify-content: left;
+  align-items: left;
+  margin: 100px 0 0 50px;
 }
 
 .contact-container h2 {
@@ -393,7 +409,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   margin: 0 25px 25px 25px;
 }
 
