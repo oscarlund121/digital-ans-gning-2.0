@@ -211,6 +211,7 @@ ul {
   font-size: 36px;
   grid-column: 1 / -1;
   text-decoration: underline;
+  margin-bottom: 75px;
 }
 
 .about-container h3 {
@@ -252,7 +253,7 @@ span {
 .list-content {
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 25px;
+  margin: 0;
   padding: 0;
 }
 
@@ -275,9 +276,8 @@ span {
 .about-img {
   width: 100%;
   height: auto;
- /*  border-radius: 25px; */
   min-width: 350px;
-  box-shadow: 0 0 10px 0 rgba(33,33,33,.5); 
+  box-shadow: 0 0 10px 0 rgba(33, 33, 33, 0.5);
 }
 
 .about-content-svg {
@@ -313,6 +313,7 @@ span {
   align-self: flex-start;
   font-size: 36px;
   text-decoration: underline;
+  margin-bottom: 75px;
 }
 
 .project-content {
@@ -337,17 +338,16 @@ span {
   border: solid 1px black;
   padding: 10px;
   margin: 0 0 50px 0;
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 .project-box:hover {
   transform: scale(1.01);
-  box-shadow: 0 0 20px rgba(33,33,33,.2); 
+  box-shadow: 0 0 20px rgba(33, 33, 33, 0.2);
 }
 .project-box img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
 }
 
 .project-button {
@@ -360,7 +360,7 @@ span {
   padding: 10px 30px;
   font-size: 18px;
   text-decoration: none;
- 
+
   width: 180px;
 }
 
@@ -372,7 +372,7 @@ span {
   transition: background-color 0.1s ease;
 }
 
-.project-svg{
+.project-svg {
   max-width: 50px;
   height: auto;
   cursor: pointer;
@@ -380,7 +380,7 @@ span {
 
 .project-svg:hover {
   transform: scale(1.1);
-} 
+}
 
 .link-content {
   display: flex;
@@ -535,7 +535,7 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: center;
     margin: 0 50px 0 50px;
     padding: 0;
   }
@@ -587,6 +587,7 @@ span {
   .about-container p {
     font-size: 18px;
     font-weight: 400;
+    padding: 50px 0 50px 0;
   }
 
   .about-content-img-list {
@@ -598,11 +599,20 @@ span {
     max-width: 350px;
     min-width: 100px;
     height: auto;
-    align-self: center;
+    padding: 0;
+    margin: 0 0 50px 25px;
+  }
+
+  .list-content {
+    margin-left: 25px;
   }
 
   .list-content {
     display: flex;
     flex-direction: column;
+  }
+
+  .project-container {
+    align-items: center;
   }
 }
