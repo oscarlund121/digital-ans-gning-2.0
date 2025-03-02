@@ -196,7 +196,6 @@ ul {
 
 .parallex h3 {
   font-size: 36px;
-  font-weight: 400;
 }
 
 /* About */
@@ -558,9 +557,9 @@ span {
     font-size: 28px;
   }
 
-  .parallex p {
+  .parallex h3 {
     font-size: 18px;
-    font-weight: 400;
+    
   }
 
   .parallex {
@@ -576,12 +575,16 @@ span {
   /* About */
   .about-container {
     align-items: center;
-    margin: 15px;
+    margin: 15px 0 0 30px;
+  }
+
+  .about-container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
   }
 
   .about-container h3 {
     font-size: 24px;
-    font-weight: 600;
   }
 
   .about-container p {
