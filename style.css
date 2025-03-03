@@ -621,6 +621,10 @@ span {
     font-size: 22px;
   }
 
+  .about-content {
+    margin-top: 50px;
+  }
+
   .about-content-img-list {
     display: flex;
     flex-direction: column;
@@ -661,6 +665,8 @@ span {
 
   .contact-container h2 {
     font-size: 28px;
+    margin-bottom: 50px;
+    
   }
 
   .contact-info p {
