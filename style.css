@@ -321,7 +321,7 @@ span {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 25px 25px 0 25px;
+  margin: 0 25px 0 25px;
 }
 
 .project-content h4 {
@@ -348,14 +348,13 @@ span {
 .project-box img {
   width: 100%;
   height: auto;
-  
 }
 
 .project-button {
   font-family: "Chillax-Regular";
   background-color: black;
   border: none;
-  
+
   cursor: pointer;
   color: white;
   padding: 10px 30px;
@@ -396,24 +395,48 @@ span {
 .contact-container {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: center;
   align-items: left;
-  margin: 100px 0 0 50px;
+  margin: 50px 50px;
+  text-align: left;
 }
 
 .contact-container h2 {
   font-size: 36px;
   text-decoration: underline;
+  margin-bottom: 25px;
 }
 
-.contact-content {
+.contact-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: left;
-  margin: 0 25px 25px 25px;
+  gap: 10px;
+  font-size: 18px;
+  margin: 0 25px;
 }
 
+.contact-info p {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: black;
+  margin-top: 25px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.linkedin-button:hover {
+  background: #005582;
+}
 @media (max-width: 1250px) {
   .navigation {
     width: 100%;
@@ -536,7 +559,7 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     margin: 0 50px 0 50px;
     padding: 0;
   }
@@ -561,7 +584,6 @@ span {
 
   .parallex h3 {
     font-size: 18px;
-    
   }
 
   .parallex {
@@ -595,6 +617,10 @@ span {
     padding: 50px 0 50px 0;
   }
 
+  .about-container h4 {
+    font-size: 22px;
+  }
+
   .about-content-img-list {
     display: flex;
     flex-direction: column;
@@ -617,7 +643,29 @@ span {
     flex-direction: column;
   }
 
+  .project-container h2 {
+    font-size: 28px;
+    align-self: center;
+  }
+
+
   .project-container {
+    justify-content: center;
     align-items: center;
   }
+
+  .contact-container {
+   justify-content: center;
+    align-items: center;
+  }
+
+  .contact-container h2 {
+    font-size: 28px;
+  }
+
+  .contact-info p {
+    font-size: 18px;
+  }
 }
+
+
